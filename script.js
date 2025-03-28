@@ -1,24 +1,13 @@
-const lista = document.getElementById('lista');
-const btnEmbaralhar = document.getElementById('button-embaralhar');
-const itensLista = Array.from(lista.children);
+// const btnCliques = document.getElementById('button-clique');
+// const cliques = document.getElementById('contador');
+// const btnReset = document.getElementById ('button-reset')
+// let cont = 0;
 
-function embaralharLista(lista) {
-    let currentIndex = lista.length;
-    while (currentIndex !== 0) {
-        const randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-
-        [lista[currentIndex], lista[randomIndex]] = [lista[randomIndex], lista[currentIndex]];
-    }
-
-    return lista;
-}
-
-btnEmbaralhar.addEventListener('click', function() {
-    const listaEmbaralhada = embaralharLista([...itensLista]);
-
-    lista.innerHTML = '';
-    listaEmbaralhada.forEach(item => {
-        lista.appendChild(item);
-    });
-});
+// btnCliques.addEventListener('click', function(){
+//     cont++;
+//     cliques.textContent = 'Cliques: ' + cont;
+// })
+// btnReset.addEventListener('click', function(){
+//     cont =0;
+//     cliques.textContent = 'Cliques:' +cont;
+// })
